@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java-review.iml" filepath="$PROJECT_DIR$/.idea/Java-review.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-enum/java-enum.iml" filepath="$PROJECT_DIR$/java-enum/java-enum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javanetty/javanetty.iml" filepath="$PROJECT_DIR$/javanetty/javanetty.iml" />
+    </modules>
+  </component>
+</project>
