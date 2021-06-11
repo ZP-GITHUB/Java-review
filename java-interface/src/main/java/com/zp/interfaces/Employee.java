@@ -1,4 +1,4 @@
-package interfaces;
+package com.zp.interfaces;
 
 public class Employee implements Comparable<Employee>
 {

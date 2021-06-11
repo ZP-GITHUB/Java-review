@@ -1,4 +1,4 @@
-package interfaces;
+package com.zp.interfaces;
 
 import java.util.*;
 
