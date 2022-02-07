@@ -3,6 +3,7 @@ package com.zp;
 /**
  * @author ZP
  * @date 2022/2/7.
+ * 单例模式DCL代码
  */
 public class SingletonDemo {
     private static volatile SingletonDemo instance = null;
