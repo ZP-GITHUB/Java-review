@@ -3,6 +3,7 @@ package com.zp;
 /**
  * @author ZP
  * @date 2022/2/11.
+ * 使用synchronized
  */
 class Phone{
     public synchronized void sendSms(){
