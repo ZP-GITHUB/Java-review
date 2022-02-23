@@ -31,6 +31,7 @@ class MyResource {
         boolean returnValue;
         while (flag) {
             data = atomicInteger.incrementAndGet() + "";
+            /**设置插入超时时间为2秒*/
             returnValue = blockingQueue.offer(data, 2L, TimeUnit.SECONDS);
             if (returnValue) {
                 System.out.println(Thread.currentThread().getName() + "\t 插入队列数据" + data + "成功");
@@ -45,6 +46,7 @@ class MyResource {
     public void myConsumer() throws Exception {
         String result = null;
         while (flag) {
+            /**取出超时时间为2秒*/
             result = blockingQueue.poll(2L, TimeUnit.SECONDS);
             if(null==result||"".equalsIgnoreCase(result)){
                 flag=false;
@@ -72,6 +74,7 @@ class MyResource {
  **/
 public class ProdConsumerBlockQueueDemo {
     public static void main(String[] args) throws Exception {
+        /**加入堵塞队列*/
         MyResource myResource = new MyResource(new ArrayBlockingQueue<>(10));
         new Thread(()->{
             System.out.println(Thread.currentThread().getName()+"\t生产线程启动");
