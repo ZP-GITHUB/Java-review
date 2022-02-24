@@ -16,6 +16,7 @@ import java.util.concurrent.locks.ReentrantLock;
 class ShareData {
     private int num = 0;
     private Lock lock = new ReentrantLock();
+    /**设置条件*/
     private Condition condition = lock.newCondition();
 
     public void increment() throws Exception {
@@ -62,6 +63,7 @@ public class ProdConsumerTraditionDemo {
     public static void main(String[] args) {
         ShareData shareData = new ShareData();
         new Thread(() -> {
+            /**一个线程操作一次*/
             for (int i = 1; i <= 5; i++) {
                 try {
                     shareData.increment();
