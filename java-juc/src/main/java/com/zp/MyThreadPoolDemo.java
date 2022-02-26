@@ -5,6 +5,7 @@ import java.util.concurrent.*;
 /**
  * @author ZP
  * @date 2022/2/25.
+ * 使用ThreadPoolExecutor创建线程
  */
 public class MyThreadPoolDemo {
     public static void main(String[] args) {
@@ -13,7 +14,7 @@ public class MyThreadPoolDemo {
                 5,
                 1L,
                 TimeUnit.SECONDS,
-                new LinkedBlockingDeque<Runnable>(3),
+                new LinkedBlockingDeque<Runnable>(3), //这里不指定的话将会是MAX_VALUE
                 Executors.defaultThreadFactory(),
                 //默认抛出异常
                 //new ThreadPoolExecutor.AbortPolicy()
